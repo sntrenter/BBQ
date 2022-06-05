@@ -12,7 +12,13 @@ async function run() {
     let found = await BBQTime.findOne();
     console.log(found);
 
+    console.log(await BBQTime.countDocuments())
 
+    let founds = await BBQTime.find().toArray();
+
+    founds.forEach(n=>console.log(n))
+
+    console.log("test")
 
   } finally {
     // Ensures that the client will close when you finish/error
